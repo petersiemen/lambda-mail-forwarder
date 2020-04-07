@@ -1,0 +1,43 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  lambda-mail-forwarder
+
+  Sample SAM Template for lambda-mail-forwarder
+
+# More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
+Globals:
+  Function:
+    Timeout: 3
+
+Parameters:
+  EMAIL:
+    Type: String
+    Description: SES verified e-mail address to send and receiv
+  BUCKET:
+    Type: String
+    Description: Bucket where SNS is storing the raw email
+
+Resources:
+  LambdaMailForwarderFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      CodeUri: ./
+      Handler: app.handler
+      Runtime: nodejs12.x
+      Environment:
+        Variables:
+          EMAIL: !Ref EMAIL
+          BUCKET: !Ref BUCKET
+
+
+Outputs:
+  # ServerlessRestApi is an implicit API created out of Events key under Serverless::Function
+  # Find out more about other implicit resources you can reference within SAM
+  # https://github.com/awslabs/serverless-application-model/blob/master/docs/internals/generated_resources.rst#api
+  HelloWorldFunction:
+    Description: "Hello World Lambda Function ARN"
+    Value: !GetAtt LambdaMailForwarderFunction.Arn
+  HelloWorldFunctionIamRole:
+    Description: "Implicit IAM Role created for Hello World function"
+    Value: !GetAtt LambdaMailForwarderFunctionRole.Arn

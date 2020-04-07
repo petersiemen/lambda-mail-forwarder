@@ -1,0 +1,19 @@
+{
+  "name": "lambda-mail-forwarder",
+  "version": "1.0.0",
+  "description": "forward mail using sendRawEmail",
+  "main": "app.js",
+  "author": "SAM CLI",
+  "license": "MIT",
+  "dependencies": {
+  },
+  "scripts": {
+    "test": "mocha tests/unit/"
+  },
+  "devDependencies": {
+    "fs": "0.0.1-security",
+    "aws-sdk": "^2.653.0",
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4"
+  }
+}

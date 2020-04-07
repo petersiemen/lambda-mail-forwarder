@@ -1,0 +1,144 @@
+{
+    "Records": [
+        {
+            "eventSource": "aws:ses",
+            "eventVersion": "1.0",
+            "ses": {
+                "mail": {
+                    "timestamp": "2020-04-06T16:46:21.677Z",
+                    "source": "peter.siemen@gmail.com",
+                    "messageId": "dmt18etquupkl9psie3sr3jl7bdpcif066cgido1",
+                    "destination": [
+                        "mail@preview.petersiemen.net"
+                    ],
+                    "headersTruncated": false,
+                    "headers": [
+                        {
+                            "name": "Return-Path",
+                            "value": "<peter.siemen@gmail.com>"
+                        },
+                        {
+                            "name": "Received",
+                            "value": "from mail-lf1-f41.google.com (mail-lf1-f41.google.com [209.85.167.41]) by inbound-smtp.eu-west-1.amazonaws.com with SMTP id dmt18etquupkl9psie3sr3jl7bdpcif066cgido1 for mail@preview.petersiemen.net; Mon, 06 Apr 2020 16:46:21 +0000 (UTC)"
+                        },
+                        {
+                            "name": "X-SES-Spam-Verdict",
+                            "value": "PASS"
+                        },
+                        {
+                            "name": "X-SES-Virus-Verdict",
+                            "value": "PASS"
+                        },
+                        {
+                            "name": "Received-SPF",
+                            "value": "pass (spfCheck: domain of _spf.google.com designates 209.85.167.41 as permitted sender) client-ip=209.85.167.41; envelope-from=peter.siemen@gmail.com; helo=mail-lf1-f41.google.com;"
+                        },
+                        {
+                            "name": "Authentication-Results",
+                            "value": "amazonses.com; spf=pass (spfCheck: domain of _spf.google.com designates 209.85.167.41 as permitted sender) client-ip=209.85.167.41; envelope-from=peter.siemen@gmail.com; helo=mail-lf1-f41.google.com; dkim=pass header.i=@gmail.com; dmarc=pass header.from=gmail.com;"
+                        },
+                        {
+                            "name": "X-SES-RECEIPT",
+                            "value": "AEFBQUFBQUFBQUFIb3NLVmdlNmYyd1k4MWJuL3FPWlNkWEEyVXdGaDRrYlE5dGczM1lBcE1zbENzTmtoSG85OUR6cks0c01CTWxQdU41S1B5bk15KzgwK05EL1htb1RvaENLR2szV3BZUnQzU2U1SUxmdFE2MGZteS91OW05SEEzalQ2TmV1TTVJQnJLdStSU1JVVDJka2VIODdTNzR4NVBuVFQ4enp0UWpMMTM1RXVPeHpnd3d3UFd6TDVXVFNiS0NEdHlJcURCVkNWSFdlSVdlT3lMODdzeENONWJZdllPazdjL3JoVnZnSGhJUjV0dG5BSDI5VUhFTXppVk9YanQ2d01GOE1PMGJQb0tGK1hac0V3S1d6b2dWVWpYNlQya3hMMVJkdE9remZ4cERxUkk0YVJIa0E9PQ=="
+                        },
+                        {
+                            "name": "X-SES-DKIM-SIGNATURE",
+                            "value": "a=rsa-sha256; q=dns/txt; b=hPoiNk7KJ5DfiTM2Dq/ozn6C3auZ8SGbBmD9fkmtgY53paJ7DBo5z5AFeVAMYTHYtKqD2Yr0EDoNpuM6g4mC+EV2oXwiETTSE7J6Ws5HK/ZoudgJupZ8LLBqkOPdOKUYYWzsJ0KC1FVzv7voGOwOfSLf7c+Jh8CpfzdFQpAz/kA=; c=relaxed/simple; s=shh3fegwg5fppqsuzphvschd53n6ihuv; d=amazonses.com; t=1586191582; v=1; bh=6vZtmAX6cECDUCaw5TVL0fHfz2m4lntocWWP1153+Yo=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;"
+                        },
+                        {
+                            "name": "Received",
+                            "value": "by mail-lf1-f41.google.com with SMTP id j17so19936lfe.7 for <mail@preview.petersiemen.net>; Mon, 06 Apr 2020 09:46:21 -0700 (PDT)"
+                        },
+                        {
+                            "name": "DKIM-Signature",
+                            "value": "v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025; h=mime-version:from:date:message-id:subject:to; bh=HKM6NoFUM/VBY9Cl97OlJ6p8yo21mMEP5JdFrIfhsQc=; b=p+ophWpFEBk7OE8kKqvC9IZlGfIUIh4rCOcPFEKsDo/Wd62tL6PD2PR6kbVXSgDR7RNg5b8hwONvRVwqKjWgYkVsALott+t55HlJ8yeKKLy9v0VCbF3ygV+XO71r03GCxqIc+V5w1sKaOhFE8vzuqGwohJ+2Qkjdf18CWVszORtTlBSLW6wbfgCrLPGxLnhwtCm8AbWsPB9hyULxeifA7Vh1DE/MrK6XakPAiyGUYKwqSl+Z6klzY9FuNwJnl9b2YolSjgxyzSDZNMFyFR1dILJJhBL8zYb4Nnd+BVTyowpZEvbYrn0pAzdzD7tnNpYbGoEGX0oEvjuL+R+VMnr7CQ=="
+                        },
+                        {
+                            "name": "X-Google-DKIM-Signature",
+                            "value": "v=1; a=rsa-sha256; c=relaxed/relaxed; d=1e100.net; s=20161025; h=x-gm-message-state:mime-version:from:date:message-id:subject:to; bh=HKM6NoFUM/VBY9Cl97OlJ6p8yo21mMEP5JdFrIfhsQc=; b=nUI3DgSrteGV6neivKaF/aT5dWTatov9pbaLCcJbqGJ3o0wZ8SC7Xr7qUjYUpUB39X ewd6HHy6lUU2C2iu31+tzkSRdoQnQG6AWKI26da+JKKNNjSuobRPkiP1nuyhAQoDr0Kn 90Z5TSQQe+SoubNyTPmOGh5dOx2BE2zSOJTFRMrI5uBRiThlmZKlraoFT1zEhm2USCfE WFb1ZsmOaB6AxWa9mxa2sL8Xo5Pnjgi6GFkuBhyftxaze/gDlWlLgqO1blDyfpl9/qD2 pMYtsBcpzzShcttQSREtZ80J8eMZUkr7jerUERk/f1B3lYB0P+4NmA9FO4bEvUQhk+yj 3lew=="
+                        },
+                        {
+                            "name": "X-Gm-Message-State",
+                            "value": "AGi0PuaiPVS3IeOKn3VOIUidEO/TahuuTLVW/ne4Kx8POwJLytpqMIFm QdQE4kTLw/6aUHWPhl0LxGYwxVqulG4Xpkg7BRaSH5w5ggQ="
+                        },
+                        {
+                            "name": "X-Google-Smtp-Source",
+                            "value": "APiQypJfFwABFBZsc1djgl5MPpIHYSiWu2HLaJpjbueYPioZzmc8B27NKcH+FLpI+i+Z7h0HQ31xO59ri61EJ1PyxAk="
+                        },
+                        {
+                            "name": "X-Received",
+                            "value": "by 2002:ac2:5208:: with SMTP id a8mr13386762lfl.88.1586191580084; Mon, 06 Apr 2020 09:46:20 -0700 (PDT)"
+                        },
+                        {
+                            "name": "MIME-Version",
+                            "value": "1.0"
+                        },
+                        {
+                            "name": "From",
+                            "value": "Peter Siemen <peter.siemen@gmail.com>"
+                        },
+                        {
+                            "name": "Date",
+                            "value": "Mon, 6 Apr 2020 18:46:08 +0200"
+                        },
+                        {
+                            "name": "Message-ID",
+                            "value": "<CABb6u1i+cCOKAGxPDUgH0viHLS-QU1HX3ARazqt6R3rsvLsXdA@mail.gmail.com>"
+                        },
+                        {
+                            "name": "Subject",
+                            "value": "again"
+                        },
+                        {
+                            "name": "To",
+                            "value": "mail@preview.petersiemen.net"
+                        },
+                        {
+                            "name": "Content-Type",
+                            "value": "multipart/mixed; boundary=\"000000000000ad5d5805a2a201b0\""
+                        }
+                    ],
+                    "commonHeaders": {
+                        "returnPath": "peter.siemen@gmail.com",
+                        "from": [
+                            "Peter Siemen <peter.siemen@gmail.com>"
+                        ],
+                        "date": "Mon, 6 Apr 2020 18:46:08 +0200",
+                        "to": [
+                            "mail@preview.petersiemen.net"
+                        ],
+                        "messageId": "<CABb6u1i+cCOKAGxPDUgH0viHLS-QU1HX3ARazqt6R3rsvLsXdA@mail.gmail.com>",
+                        "subject": "again"
+                    }
+                },
+                "receipt": {
+                    "timestamp": "2020-04-06T16:46:21.677Z",
+                    "processingTimeMillis": 641,
+                    "recipients": [
+                        "mail@preview.petersiemen.net"
+                    ],
+                    "spamVerdict": {
+                        "status": "PASS"
+                    },
+                    "virusVerdict": {
+                        "status": "PASS"
+                    },
+                    "spfVerdict": {
+                        "status": "PASS"
+                    },
+                    "dkimVerdict": {
+                        "status": "PASS"
+                    },
+                    "dmarcVerdict": {
+                        "status": "PASS"
+                    },
+                    "action": {
+                        "type": "Lambda",
+                        "functionArn": "arn:aws:lambda:eu-west-1:387558367268:function:test",
+                        "invocationType": "Event"
+                    }
+                }
+            }
+        }
+    ]
+}
