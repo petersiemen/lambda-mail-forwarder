@@ -79,7 +79,5 @@ exports.handler = async (event, context) => {
     let BUCKET = process.env.BUCKET;
     let EMAIL = process.env.EMAIL;
 
-    // var bucket = 'mail.preview.petersiemen.net';
-    // var email = 'peter.siemen+development@gmail.com';
     return handleEvent(event, BUCKET, EMAIL);
 };
