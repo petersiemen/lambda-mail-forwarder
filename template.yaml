@@ -34,6 +34,14 @@ Resources:
               - ses:SendEmail
               - ses:SendRawEmail
             Resource: '*'
+        - Statement:
+            - Sid: ReadRawMailFromS3
+              Effect: Allow
+              Action:
+                - s3:Get*
+              Resource:
+                - arn:aws:s3:::mail.preview.petersiemen.net/*
+                - arn:aws:s3:::mail.petersiemen.net/*
       Environment:
         Variables:
           EMAIL: !Ref EMAIL
