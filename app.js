@@ -56,6 +56,9 @@ function sendRawEmail(email, buffer) {
         Destinations: [email],
         Source: email
     };
+
+    console.info("RAW\n" + JSON.stringify(params, null, 2));
+
     return SES.sendRawEmail(params).promise();
 }
 
@@ -67,8 +70,14 @@ async function handleEvent(event, bucket, email) {
     return getObject(bucket, ses.mail.messageId)
         .then(function (result) {
             let replaced = replaceEmails(result.Body, email);
+
+
             return sendRawEmail(email, replaced)
         }).then(function (result) {
+
+
+
+
             return {
                 statusCode: '200',
                 body: JSON.stringify(result)
