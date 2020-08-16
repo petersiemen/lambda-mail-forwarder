@@ -31,6 +31,7 @@ async function handleEvent(event, bucket, email) {
       }
     )
     .then(parsed => {
+      console.log(parsed);
       return transporter.sendMail({
         from: email,
         to: email,
