@@ -18,20 +18,19 @@ function getObject(bucket, key) {
 
 
 async function handleEvent(event, bucket, email) {
-  console.info("EVENT\n" + JSON.stringify(event, null, 2));
+  // console.info("EVENT\n" + JSON.stringify(event, null, 2));
 
   let ses = event.Records[0]['ses'];
 
-
-  getObject(bucket, ses.mail.messageId)
+  return getObject(bucket, ses.mail.messageId)
     .then(result => {
         return simpleParser(result.Body)
       }, reason => {
-        console.log(reason);
+        console.error(reason);
       }
     )
     .then(parsed => {
-      console.log(parsed);
+      // console.info("PARSED\n" + JSON.stringify(parsed, null, 2));
       return transporter.sendMail({
         from: email,
         to: email,
@@ -40,12 +39,14 @@ async function handleEvent(event, bucket, email) {
         text: parsed.text,
         html: parsed.html,
         attachments: parsed.attachments
-      });
-    }).then(success => {
-      console.log(success)
-  }, failure => {
-      console.log(failure)
-  })
+      })
+    }).then(
+      success => {
+        console.info(success)
+      },
+      reason => {
+        console.info(reason)
+      })
 
 }
 

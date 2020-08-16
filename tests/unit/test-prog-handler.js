@@ -10,16 +10,19 @@ describe('Handler', function () {
   this.timeout(10000);
   it('prog', async () => {
 
-    var end = new Promise(function (resolve, reject) {
+    let end = new Promise(function (resolve, reject) {
       fs.readFile('events/event.json', {
         encoding: 'utf8',
         flag: 'r'
       }, function read(err, data) {
 
 
-        app.handler(JSON.parse(data), null)
+        app.handler(JSON.parse(data), null).then(res => {
 
-        resolve(1)
+          resolve(1)
+        })
+
+
       })
     });
     await end
