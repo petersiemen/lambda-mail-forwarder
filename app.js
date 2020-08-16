@@ -60,7 +60,10 @@ function sendRawEmail(email, buffer) {
 }
 
 async function handleEvent(event, bucket, email) {
-    var ses = event.Records[0]['ses'];
+    let ses = event.Records[0]['ses'];
+
+    console.info("EVENT\n" + JSON.stringify(event, null, 2));
+
     return getObject(bucket, ses.mail.messageId)
         .then(function (result) {
             let replaced = replaceEmails(result.Body, email);
