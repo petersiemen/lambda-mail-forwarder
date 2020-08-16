@@ -1,6 +1,12 @@
 const AWS = require('aws-sdk');
 const S3 = new AWS.S3({region: 'eu-west-1'});
 const SES = new AWS.SES({region: 'eu-west-1'});
+let nodemailer = require("nodemailer");
+let transporter = nodemailer.createTransport({
+    SES: new AWS.SES({ apiVersion: "2010-12-01" })
+});
+
+
 
 function replace(lines, replacement, re, use_orig = false) {
     return lines.map(function (line) {
@@ -34,7 +40,7 @@ function replaceReturnPath(lines, email) {
 function replaceEmails(data, email) {
     let lines = data.toString().split(/(?:\r\n|\r|\n)/g);
 
-    var replaced = replaceFrom(lines, email);
+    let replaced = replaceFrom(lines, email);
     replaced = replaceTo(replaced, email);
     replaced = replaceReturnPath(replaced, email);
 
@@ -69,10 +75,29 @@ async function handleEvent(event, bucket, email) {
 
     return getObject(bucket, ses.mail.messageId)
         .then(function (result) {
-            let replaced = replaceEmails(result.Body, email);
+
+            transporter.sendMail({
+                from: email,
+
+                to: email,
+                subject: 'Message',
+                text: 'I hope this message gets sent!',
+                ses: { // optional extra arguments for SendRawEmail
+                    Tags: [{
+                        Name: 'tag name',
+                        Value: 'tag value'
+                    }]
+                }
+            }, (err, info) => {
+                console.log(info.envelope);
+                console.log(info.messageId);
+            });
 
 
-            return sendRawEmail(email, replaced)
+            // let replaced = replaceEmails(result.Body, email);
+
+
+            // return sendRawEmail(email, replaced)
         }).then(function (result) {
 
 
@@ -86,6 +111,7 @@ async function handleEvent(event, bucket, email) {
 }
 
 exports.replaceEmails = replaceEmails;
+exports.sendRawEmail = sendRawEmail;
 exports.replaceFrom = replaceFrom;
 exports.handler = async (event, context) => {
     let BUCKET = process.env.BUCKET;

@@ -6,6 +6,7 @@
   "author": "SAM CLI",
   "license": "MIT",
   "dependencies": {
+    "nodemailer": "^6.4.11"
   },
   "scripts": {
     "test": "mocha tests/unit/"
