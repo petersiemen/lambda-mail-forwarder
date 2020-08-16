@@ -8,6 +8,7 @@ phases:
       nodejs: 12
   build:
     commands:
+      - npm install
       - aws cloudformation package --template-file template.yaml --s3-bucket $BUCKET  --s3-prefix lambda-mail-forwarder --output-template-file packaged-template.yaml
 artifacts:
   type: zip

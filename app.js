@@ -1,8 +1,8 @@
 const AWS = require('aws-sdk');
 const S3 = new AWS.S3({region: 'eu-west-1'});
-const SES = new AWS.SES({region: 'eu-west-1'});
-let nodemailer = require("nodemailer");
-let transporter = nodemailer.createTransport({
+// const SES = new AWS.SES({region: 'eu-west-1'});
+const nodemailer = require("nodemailer");
+const transporter = nodemailer.createTransport({
   SES: new AWS.SES({apiVersion: "2010-12-01"})
 });
 
@@ -75,7 +75,7 @@ async function handleEvent(event, bucket, email) {
   console.info("EVENT\n" + JSON.stringify(event, null, 2));
 
   let ses = event.Records[0]['ses'];
-  
+
 
   getObject(bucket, ses.mail.messageId)
     .then(result => {
