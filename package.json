@@ -6,6 +6,7 @@
   "author": "SAM CLI",
   "license": "MIT",
   "dependencies": {
+    "mailparser": "^2.8.1",
     "nodemailer": "^6.4.11"
   },
   "scripts": {
