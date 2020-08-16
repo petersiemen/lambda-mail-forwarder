@@ -1,6 +1,5 @@
 const AWS = require('aws-sdk');
 const S3 = new AWS.S3({region: 'eu-west-1'});
-// const SES = new AWS.SES({region: 'eu-west-1'});
 const nodemailer = require("nodemailer");
 const transporter = nodemailer.createTransport({
   SES: new AWS.SES({apiVersion: "2010-12-01"})
@@ -36,15 +35,16 @@ async function handleEvent(event, bucket, email) {
         from: email,
         to: email,
         subject: parsed.subject,
-        replyTo: from.text,
-        text: data.text,
-        html: data.html,
-        attachments: data.attachments
-      }, (err, info) => {
-        console.log(info.envelope);
-        console.log(info.messageId);
+        replyTo: parsed.from.text,
+        text: parsed.text,
+        html: parsed.html,
+        attachments: parsed.attachments
       });
-    })
+    }).then(success => {
+      console.log(success)
+  }, failure => {
+      console.log(failure)
+  })
 
 }
 
