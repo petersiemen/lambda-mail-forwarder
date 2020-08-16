@@ -5,21 +5,21 @@
             "eventVersion": "1.0",
             "ses": {
                 "mail": {
-                    "timestamp": "2020-04-06T16:46:21.677Z",
-                    "source": "peter.siemen@gmail.com",
-                    "messageId": "dmt18etquupkl9psie3sr3jl7bdpcif066cgido1",
+                    "timestamp": "2020-08-16T09:08:23.674Z",
+                    "source": "Peter.siemen@protonmail.com",
+                    "messageId": "f4bg9borq7k2e4u3maaq0obs9imu56um5u800fg1",
                     "destination": [
-                        "mail@preview.petersiemen.net"
+                        "mail@petersiemen.net"
                     ],
                     "headersTruncated": false,
                     "headers": [
                         {
                             "name": "Return-Path",
-                            "value": "<peter.siemen@gmail.com>"
+                            "value": "<Peter.siemen@protonmail.com>"
                         },
                         {
                             "name": "Received",
-                            "value": "from mail-lf1-f41.google.com (mail-lf1-f41.google.com [209.85.167.41]) by inbound-smtp.eu-west-1.amazonaws.com with SMTP id dmt18etquupkl9psie3sr3jl7bdpcif066cgido1 for mail@preview.petersiemen.net; Mon, 06 Apr 2020 16:46:21 +0000 (UTC)"
+                            "value": "from mail-40138.protonmail.ch (mail-40138.protonmail.ch [185.70.40.138]) by inbound-smtp.eu-west-1.amazonaws.com with SMTP id f4bg9borq7k2e4u3maaq0obs9imu56um5u800fg1 for mail@petersiemen.net; Sun, 16 Aug 2020 09:08:23 +0000 (UTC)"
                         },
                         {
                             "name": "X-SES-Spam-Verdict",
@@ -31,91 +31,86 @@
                         },
                         {
                             "name": "Received-SPF",
-                            "value": "pass (spfCheck: domain of _spf.google.com designates 209.85.167.41 as permitted sender) client-ip=209.85.167.41; envelope-from=peter.siemen@gmail.com; helo=mail-lf1-f41.google.com;"
+                            "value": "pass (spfCheck: domain of protonmail.com designates 185.70.40.138 as permitted sender) client-ip=185.70.40.138; envelope-from=Peter.siemen@protonmail.com; helo=mail-40138.protonmail.ch;"
                         },
                         {
                             "name": "Authentication-Results",
-                            "value": "amazonses.com; spf=pass (spfCheck: domain of _spf.google.com designates 209.85.167.41 as permitted sender) client-ip=209.85.167.41; envelope-from=peter.siemen@gmail.com; helo=mail-lf1-f41.google.com; dkim=pass header.i=@gmail.com; dmarc=pass header.from=gmail.com;"
+                            "value": "amazonses.com; spf=pass (spfCheck: domain of protonmail.com designates 185.70.40.138 as permitted sender) client-ip=185.70.40.138; envelope-from=Peter.siemen@protonmail.com; helo=mail-40138.protonmail.ch; dkim=pass header.i=@protonmail.com; dmarc=pass header.from=protonmail.com;"
                         },
                         {
                             "name": "X-SES-RECEIPT",
-                            "value": "AEFBQUFBQUFBQUFIb3NLVmdlNmYyd1k4MWJuL3FPWlNkWEEyVXdGaDRrYlE5dGczM1lBcE1zbENzTmtoSG85OUR6cks0c01CTWxQdU41S1B5bk15KzgwK05EL1htb1RvaENLR2szV3BZUnQzU2U1SUxmdFE2MGZteS91OW05SEEzalQ2TmV1TTVJQnJLdStSU1JVVDJka2VIODdTNzR4NVBuVFQ4enp0UWpMMTM1RXVPeHpnd3d3UFd6TDVXVFNiS0NEdHlJcURCVkNWSFdlSVdlT3lMODdzeENONWJZdllPazdjL3JoVnZnSGhJUjV0dG5BSDI5VUhFTXppVk9YanQ2d01GOE1PMGJQb0tGK1hac0V3S1d6b2dWVWpYNlQya3hMMVJkdE9remZ4cERxUkk0YVJIa0E9PQ=="
+                            "value": "AEFBQUFBQUFBQUFFNktKRWgwNFZHOUJvM0EraFF2eUoxMzh4d2ltZ1k2UEJnemt6TXhJRDEvNmV6Z0ZETHpuRWxGRWpSZUFFK3VFOVlnWk5WeDN4eDF3OVlpN0tsQ2ZoMnd1WnFVeGlQVlkzMVBCT2V1NHlZem9RbUpSbUVZbUsrcHNUUFpzYWdhTnFEek5hRENtaFVjTFhab0s3L21FdURkeTc3OFFvNDJTNkNkRWR6d0dZUTNQc0hJcnhVbFBEZFJaVVpiU3Qyb3BHMXBuaWhYZ2VDWURBVVhsKzZYWWZzL2huNmI2amYzU0ZwbEc2NGdJMEs2aUhkYVRWTDd2TmNmMTgvRENlYktmS3AvWEVRa3VRS3NsTnB3M3pKT2lJeFNwYXZtMmQxSG1sbmpha0Z1RWpxT2c9PQ=="
                         },
                         {
                             "name": "X-SES-DKIM-SIGNATURE",
-                            "value": "a=rsa-sha256; q=dns/txt; b=hPoiNk7KJ5DfiTM2Dq/ozn6C3auZ8SGbBmD9fkmtgY53paJ7DBo5z5AFeVAMYTHYtKqD2Yr0EDoNpuM6g4mC+EV2oXwiETTSE7J6Ws5HK/ZoudgJupZ8LLBqkOPdOKUYYWzsJ0KC1FVzv7voGOwOfSLf7c+Jh8CpfzdFQpAz/kA=; c=relaxed/simple; s=shh3fegwg5fppqsuzphvschd53n6ihuv; d=amazonses.com; t=1586191582; v=1; bh=6vZtmAX6cECDUCaw5TVL0fHfz2m4lntocWWP1153+Yo=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;"
+                            "value": "a=rsa-sha256; q=dns/txt; b=buQM1Y92l1DhdQyFk4SjucBGplWowrQw6jV6hn8f6sKXt4VTQgZAb4C6GacN1CpT/hEBXRReovQGtcC0S3VDMvpi6rQlUTnon2tyN2Skx6ODrIN1TLw3LprmbARR/EscEPOqmVoXS25BOz7VZK4ANi8g42Zf2iUOuAExHmS7VNA=; c=relaxed/simple; s=shh3fegwg5fppqsuzphvschd53n6ihuv; d=amazonses.com; t=1597568904; v=1; bh=rXcbfjxnNYqEalHJEzW6BV/eesJ4nZy2cA/xj1bJy3E=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;"
                         },
                         {
-                            "name": "Received",
-                            "value": "by mail-lf1-f41.google.com with SMTP id j17so19936lfe.7 for <mail@preview.petersiemen.net>; Mon, 06 Apr 2020 09:46:21 -0700 (PDT)"
+                            "name": "Date",
+                            "value": "Sun, 16 Aug 2020 09:08:14 +0000"
                         },
                         {
                             "name": "DKIM-Signature",
-                            "value": "v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025; h=mime-version:from:date:message-id:subject:to; bh=HKM6NoFUM/VBY9Cl97OlJ6p8yo21mMEP5JdFrIfhsQc=; b=p+ophWpFEBk7OE8kKqvC9IZlGfIUIh4rCOcPFEKsDo/Wd62tL6PD2PR6kbVXSgDR7RNg5b8hwONvRVwqKjWgYkVsALott+t55HlJ8yeKKLy9v0VCbF3ygV+XO71r03GCxqIc+V5w1sKaOhFE8vzuqGwohJ+2Qkjdf18CWVszORtTlBSLW6wbfgCrLPGxLnhwtCm8AbWsPB9hyULxeifA7Vh1DE/MrK6XakPAiyGUYKwqSl+Z6klzY9FuNwJnl9b2YolSjgxyzSDZNMFyFR1dILJJhBL8zYb4Nnd+BVTyowpZEvbYrn0pAzdzD7tnNpYbGoEGX0oEvjuL+R+VMnr7CQ=="
+                            "value": "v=1; a=rsa-sha256; c=relaxed/relaxed; d=protonmail.com; s=protonmail; t=1597568902; bh=rXcbfjxnNYqEalHJEzW6BV/eesJ4nZy2cA/xj1bJy3E=; h=Date:To:From:Reply-To:Subject:From; b=fuu6moUjt3j3fqT2ARO7bBy7ZxaKyp+ufB9TUqQCKdyIRbSgB0Jah3k4WIAE/M/Dsnsy/on1cvkJopgKotIVLrm4xbSO/buqRZPl2qKc7Q4UguymrV8NDCU0jXQf16+vj37JTl3OHZiwu/YZ9Lkp9N67l7kpia3ewAITF2szKpk="
                         },
                         {
-                            "name": "X-Google-DKIM-Signature",
-                            "value": "v=1; a=rsa-sha256; c=relaxed/relaxed; d=1e100.net; s=20161025; h=x-gm-message-state:mime-version:from:date:message-id:subject:to; bh=HKM6NoFUM/VBY9Cl97OlJ6p8yo21mMEP5JdFrIfhsQc=; b=nUI3DgSrteGV6neivKaF/aT5dWTatov9pbaLCcJbqGJ3o0wZ8SC7Xr7qUjYUpUB39X ewd6HHy6lUU2C2iu31+tzkSRdoQnQG6AWKI26da+JKKNNjSuobRPkiP1nuyhAQoDr0Kn 90Z5TSQQe+SoubNyTPmOGh5dOx2BE2zSOJTFRMrI5uBRiThlmZKlraoFT1zEhm2USCfE WFb1ZsmOaB6AxWa9mxa2sL8Xo5Pnjgi6GFkuBhyftxaze/gDlWlLgqO1blDyfpl9/qD2 pMYtsBcpzzShcttQSREtZ80J8eMZUkr7jerUERk/f1B3lYB0P+4NmA9FO4bEvUQhk+yj 3lew=="
+                            "name": "To",
+                            "value": "\"mail@petersiemen.net\" <mail@petersiemen.net>"
                         },
                         {
-                            "name": "X-Gm-Message-State",
-                            "value": "AGi0PuaiPVS3IeOKn3VOIUidEO/TahuuTLVW/ne4Kx8POwJLytpqMIFm QdQE4kTLw/6aUHWPhl0LxGYwxVqulG4Xpkg7BRaSH5w5ggQ="
+                            "name": "From",
+                            "value": "Peter.siemen@protonmail.com"
                         },
                         {
-                            "name": "X-Google-Smtp-Source",
-                            "value": "APiQypJfFwABFBZsc1djgl5MPpIHYSiWu2HLaJpjbueYPioZzmc8B27NKcH+FLpI+i+Z7h0HQ31xO59ri61EJ1PyxAk="
+                            "name": "Reply-To",
+                            "value": "Peter.siemen@protonmail.com"
                         },
                         {
-                            "name": "X-Received",
-                            "value": "by 2002:ac2:5208:: with SMTP id a8mr13386762lfl.88.1586191580084; Mon, 06 Apr 2020 09:46:20 -0700 (PDT)"
+                            "name": "Subject",
+                            "value": "node mailer"
+                        },
+                        {
+                            "name": "Message-ID",
+                            "value": "<9cxvxGBNcDgbKaVKziIHeau7BdKRd6ybL6vNf0SfYAcWR42cIrzqBkcaWL30eTQqkEx53XAydlMcCQeprE9g5v2--ZA1uucvoj28pkym5go=@protonmail.com>"
                         },
                         {
                             "name": "MIME-Version",
                             "value": "1.0"
                         },
                         {
-                            "name": "From",
-                            "value": "Peter Siemen <peter.siemen@gmail.com>"
-                        },
-                        {
-                            "name": "Date",
-                            "value": "Mon, 6 Apr 2020 18:46:08 +0200"
-                        },
-                        {
-                            "name": "Message-ID",
-                            "value": "<CABb6u1i+cCOKAGxPDUgH0viHLS-QU1HX3ARazqt6R3rsvLsXdA@mail.gmail.com>"
-                        },
-                        {
-                            "name": "Subject",
-                            "value": "again"
-                        },
-                        {
-                            "name": "To",
-                            "value": "mail@preview.petersiemen.net"
-                        },
-                        {
                             "name": "Content-Type",
-                            "value": "multipart/mixed; boundary=\"000000000000ad5d5805a2a201b0\""
+                            "value": "multipart/signed; protocol=\"application/pgp-signature\"; micalg=pgp-sha256; boundary=\"---------------------1cec563c5f9bf60e6d645b75336ecd02\"; charset=utf-8"
+                        },
+                        {
+                            "name": "X-Spam-Status",
+                            "value": "No, score=-1.2 required=7.0 tests=ALL_TRUSTED,DKIM_SIGNED, DKIM_VALID,DKIM_VALID_AU,DKIM_VALID_EF,FREEMAIL_FROM,HTML_MESSAGE shortcircuit=no autolearn=disabled version=3.4.4"
+                        },
+                        {
+                            "name": "X-Spam-Checker-Version",
+                            "value": "SpamAssassin 3.4.4 (2020-01-24) on mail.protonmail.ch"
                         }
                     ],
                     "commonHeaders": {
-                        "returnPath": "peter.siemen@gmail.com",
+                        "returnPath": "Peter.siemen@protonmail.com",
                         "from": [
-                            "Peter Siemen <peter.siemen@gmail.com>"
+                            "Peter.siemen@protonmail.com"
                         ],
-                        "date": "Mon, 6 Apr 2020 18:46:08 +0200",
+                        "replyTo": [
+                            "Peter.siemen@protonmail.com"
+                        ],
+                        "date": "Sun, 16 Aug 2020 09:08:14 +0000",
                         "to": [
-                            "mail@preview.petersiemen.net"
+                            "\"mail@petersiemen.net\" <mail@petersiemen.net>"
                         ],
-                        "messageId": "<CABb6u1i+cCOKAGxPDUgH0viHLS-QU1HX3ARazqt6R3rsvLsXdA@mail.gmail.com>",
-                        "subject": "again"
+                        "messageId": "<9cxvxGBNcDgbKaVKziIHeau7BdKRd6ybL6vNf0SfYAcWR42cIrzqBkcaWL30eTQqkEx53XAydlMcCQeprE9g5v2--ZA1uucvoj28pkym5go=@protonmail.com>",
+                        "subject": "node mailer"
                     }
                 },
                 "receipt": {
-                    "timestamp": "2020-04-06T16:46:21.677Z",
-                    "processingTimeMillis": 641,
+                    "timestamp": "2020-08-16T09:08:23.674Z",
+                    "processingTimeMillis": 591,
                     "recipients": [
-                        "mail@preview.petersiemen.net"
+                        "mail@petersiemen.net"
                     ],
                     "spamVerdict": {
                         "status": "PASS"
@@ -134,8 +129,7 @@
                     },
                     "action": {
                         "type": "Lambda",
-                        "functionArn": "arn:aws:lambda:eu-west-1:387558367268:function:test",
-                        "invocationType": "Event"
+                        "functionArn": "arn:aws:lambda:eu-west-1:098961484923:function:lambda-mail-forwarder"
                     }
                 }
             }
